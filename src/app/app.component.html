@@ -1,0 +1,4 @@
+
+<app-pagination [currentPage]="currentPage" [maxNumberOfPages]="getMaxNumberOfPages(booksToDisplay)" (currentPageChange)="currentPage=$event"></app-pagination>
+<app-book-grid [books]="displayBooks(booksToDisplay, currentPage)"></app-book-grid>
+

@@ -1,0 +1,8 @@
+<div class="button-container" *ngIf="maxNumberOfPages > 0">
+    <button class="first-button" (click)="handleButtonClicked(0)" [disabled]="currentPage === 0">First</button>
+    <button class="prev-button" (click)="handleButtonClicked(currentPage - 1)" [disabled]="currentPage === 0">Previous</button>
+    <button class="button" *ngFor="let page of createRangeOfNumbers(maxNumberOfPages)" (click)="handleButtonClicked(page)">{{page + 1}}</button>
+   
+    <button class="next-button" (click)="handleButtonClicked(currentPage + 1)" [disabled]="currentPage === maxNumberOfPages - 1">Next</button>
+    <button class="last" (click)="handleButtonClicked(maxNumberOfPages - 1)" [disabled]="currentPage === maxNumberOfPages - 1"> Last</button>
+  </div>
